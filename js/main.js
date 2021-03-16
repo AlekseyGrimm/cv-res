@@ -204,7 +204,7 @@
         tabs[i].onclick = tabclick
     };
 
-    const imageNodes = document.querySelectorAll('folio-item > img');
+    const imageNodes = document.querySelectorAll('section > div');
 
     function tabclick(event) {
         let tab = event.target;
@@ -214,11 +214,11 @@
             tabs[x].classList.remove('active');
         }
         this.classList.add('active');
-        imageNodes.forEach(img => {
-            if (img.dataset.id === tabId || tabId === 'all') {
-                return img.classList.add('active')
+        imageNodes.forEach(div => {
+            if (div.dataset.id === tabId || tabId === 'all') {
+                return div.classList.add('active')
             } else {
-                return img.classList.remove('active')
+                return div.classList.remove('active')
             }
         });
     };
