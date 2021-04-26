@@ -1095,6 +1095,7 @@ textarea {
   }
   
   .tabs {
+    font-size: var(--text-xl);
     display: flex;
     justify-content: center;
     list-style: none;
@@ -1110,6 +1111,10 @@ textarea {
     border-radius: 10px;
     margin-right: 10px;
     font-size: 20px;
+  }
+
+  .tab:hover{
+    color: #f80202;
   }
   
   .tab.active {
@@ -1129,18 +1134,22 @@ textarea {
     padding-top: 15px;
   }
   
-  .section img:hover {
+  .section a:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: 1s;
   }
-  .section img.active {
+  .section a.active {
+    display: block;
+  }
+  
+  a > img {
     display: block;
     margin: auto;
     height: 200px;
   }
-  
-  .section img {
+
+  .section a {
     display: none;
   }
   

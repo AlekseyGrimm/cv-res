@@ -220,7 +220,7 @@ for (let i = 0; i < tabs.length; i++) {
     tabs[i].onclick = tabclick
 };
 
-const imageNodes = document.querySelectorAll('section > img');
+const imageNodes = document.querySelectorAll('section > a');
 
 function tabclick(event) {
     let tab = event.target;
@@ -230,11 +230,11 @@ function tabclick(event) {
         tabs[x].classList.remove('active');
     }
     this.classList.add('active');
-    imageNodes.forEach(img => {
-        if (img.dataset.id === tabId || tabId === 'all') {
-            return img.classList.add('active')
+    imageNodes.forEach(a => {
+        if (a.dataset.id === tabId || tabId === 'all') {
+            return a.classList.add('active')
         } else {
-            return img.classList.remove('active')
+            return a.classList.remove('active')
         }
     });
 };
