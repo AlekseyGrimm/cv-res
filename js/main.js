@@ -198,33 +198,6 @@
 
     };
 
-    const tabs = document.getElementsByClassName('tab');
-
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].onclick = tabclick
-    };
-
-    const imageNodes = document.querySelectorAll('section > div');
-
-    function tabclick(event) {
-        let tab = event.target;
-        let tabId = tab.dataset.id;
-
-        for (let x = 0; x < tabs.length; x++) {
-            tabs[x].classList.remove('active');
-        }
-        this.classList.add('active');
-        imageNodes.forEach(div => {
-            if (div.dataset.id === tabId || tabId === 'all') {
-                return div.classList.add('active')
-            } else {
-                return div.classList.remove('active')
-            }
-        });
-    };
-
-
-
     // initialize
     (function ssInit() {
 
@@ -240,3 +213,28 @@
     })();
 
 })(document.documentElement);
+
+//tab img
+const tabs = document.getElementsByClassName('tab');
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].onclick = tabclick
+};
+
+const imageNodes = document.querySelectorAll('section > img');
+
+function tabclick(event) {
+    let tab = event.target;
+    let tabId = tab.dataset.id;
+
+    for (let x = 0; x < tabs.length; x++) {
+        tabs[x].classList.remove('active');
+    }
+    this.classList.add('active');
+    imageNodes.forEach(img => {
+        if (img.dataset.id === tabId || tabId === 'all') {
+            return img.classList.add('active')
+        } else {
+            return img.classList.remove('active')
+        }
+    });
+};
