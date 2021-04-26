@@ -1095,22 +1095,25 @@ textarea {
   }
   
   .tabs {
+    display: flex;
+    justify-content: center;
     list-style: none;
     cursor: pointer;
+    margin: auto;
   }
   
   .tab {
     float: left;
-    border: 1px solid #6c7393;
+    border: 1px solid #181818;
     padding: 6px;
-    color: #7781a8;
+    color: #101010;
     border-radius: 10px;
-    margin-right: 5px;
-    font-size: 14px;
+    margin-right: 10px;
+    font-size: 20px;
   }
   
   .tab.active {
-    color: #eee;
+    color: #f81818;
   }
   
   .tab:hover{
@@ -1133,6 +1136,8 @@ textarea {
   }
   .section img.active {
     display: block;
+    margin: auto;
+    height: 200px;
   }
   
   .section img {
