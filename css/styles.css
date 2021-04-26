@@ -451,7 +451,6 @@ textarea {
   display: flex;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  padding-bottom: 50px;
 }
 
 .row .row {
@@ -3427,7 +3426,6 @@ button.btn--pill {
 .s-portfolio {
   background-color: var(--color-gray-1);
   padding-top: calc(6 * var(--space));
-  padding-bottom: var(--vspace-5);
 }
 
 .s-portfolio h3 {
