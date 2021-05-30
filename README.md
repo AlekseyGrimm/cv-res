@@ -1,1 +1,1 @@
-# cv-res
+# https://alekseygrimm.github.io/cv-res/
